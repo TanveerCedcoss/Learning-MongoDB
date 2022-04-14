@@ -1,0 +1,35 @@
+<h2>Update details</h2>
+
+<?php echo $this->tag->form(""); ?>
+
+<table>
+        <tr><td>
+        <label for="name">Name</label>
+        </td><td>
+        <?php echo $this->tag->textField(["name", "value"=>"$result->name"]); ?>
+        </td></tr>
+
+        <tr><td>
+        <label for="email">E-Mail</label>
+        </td><td>
+        <?php echo $this->tag->emailField(["email", "value"=>"$result->email"]); ?>
+        </td></tr>
+
+        <tr><td>
+        <label for="profession">Profession</label>
+        </td><td>
+        <?php echo $this->tag->textField(["profession", "value"=>"$result->profession"]); ?>
+        </td></tr>
+        </table>
+    <p>
+        <?php echo $this->tag->submitButton("Update User"); ?>
+    </p>
+
+</form>
+
+<br/>
+<?php
+echo $this->tag->linkTo(
+    '/test/show',
+    'see all users!'
+);
